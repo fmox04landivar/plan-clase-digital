@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #88a7d3;
+  color: #26344a;
+  line-height: 1.6;
+}
+
+/* 2. Barra de navegación flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px 6%;
+  background-color: #314c89;
+  color: white;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.navbar .enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffd166;
+}
+
+/* 3. Contenedor principal */
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+/* 4. Tarjetas pedagógicas */
+.modulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.tarjeta-modulo {
+  flex: 1 1 220px;
+  padding: 22px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.tarjeta-modulo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.tarjeta-modulo h2 {
+  color: #314c89;
+  margin-top: 0;
+}
+
+/* 5. Ejemplo de selector de ID */
+#actividad {
+  padding: 25px;
+  margin: 30px 0;
+  background-color: #e4ecff;
+  border-radius: 12px;
+  border-left: 5px solid #314c89;
+}
+
+/* 6. Botones y pseudoclase hover */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #314c89;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+              transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #20345f;
+  transform: scale(1.03);
+}
+
+/* 7. Campos de formulario */
+select {
+  padding: 10px;
+  border: 1px solid #aab7cf;
+  border-radius: 7px;
+  margin: 8px 0;
+}
+
+/* 8. Pie de página */
+footer {
+  padding: 20px;
+  background-color: #233865;
+  color: white;
+  text-align: center;
+}
+
+/* 9. Adaptación a pantallas pequeñas */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .enlaces {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contenedor {
+    width: 94%;
+  }
+
+  .tarjeta-modulo {
+    flex-basis: 100%;
+  }
+}
