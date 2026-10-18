@@ -1,119 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head> <link rel="stylesheet" href="estilos.css"> 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprendamos los signos de puntuación</title>
-
-</head>
-
-<body>
-  <header>
-    <h1>¡Aprendamos los signos de puntuación!</h1>
-    <p>Una aventura para escribir y comunicarnos mejor.</p>
-  </header>
-
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#leccion">Lección</a>
-    <a href="#actividad">Actividad</a>
-  </nav>
-
-  <main>
-    <section id="inicio">
-      <h2>Bienvenidos a la clase</h2>
-      <p>
-        En esta página aprenderemos cómo utilizar los signos
-        de puntuación para expresar nuestras ideas con claridad.
-      </p>
-
-      <h3>Objetivos de aprendizaje</h3>
-      <ul>
-        <li>Identificar los signos de puntuación.</li>
-        <li>Comprender para qué sirve cada signo.</li>
-        <li>Aplicar los signos en oraciones.</li>
-      </ul>
-    </section>
-
-    <section id="leccion">
-      <h2>Conozcamos los signos</h2>
-
-      <div class="tarjetas">
-        <div class="tarjeta">
-          <div class="simbolo">.</div>
-          <h3>El punto</h3>
-          <p>Indica el final de una oración.</p>
-          <p>Ejemplo: Hoy tengo clases.</p>
-        </div>
-
-        <div class="tarjeta">
-          <div class="simbolo">,</div>
-          <h3>La coma</h3>
-          <p>Separa elementos de una enumeración.</p>
-          <p>Ejemplo: Compré pan, leche y queso.</p>
-        </div>
-
-        <div class="tarjeta">
-          <div class="simbolo">¿?</div>
-          <h3>Interrogación</h3>
-          <p>Se utiliza para escribir preguntas.</p>
-          <p>Ejemplo: ¿Cómo estás?</p>
-        </div>
-
-        <div class="tarjeta">
-          <div class="simbolo">¡!</div>
-          <h3>Exclamación</h3>
-          <p>Expresa emociones o sorpresa.</p>
-          <p>Ejemplo: ¡Qué alegría!</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="actividad">
-      <h2>¡Practiquemos lo aprendido!</h2>
-      <p>Selecciona el signo que completa correctamente la oración:</p>
-
-      <h3>¿Cómo te llamas___</h3>
-
-      <select id="respuesta">
-        <option value="">Selecciona una respuesta</option>
-        <option value=".">Punto (.)</option>
-        <option value=",">Coma (,)</option>
-        <option value="?">Interrogación (?)</option>
-        <option value="!">Exclamación (!)</option>
-      </select>
-
-      <br>
-      <button onclick="comprobar()">Comprobar respuesta</button>
-
-      <p id="resultado" aria-live="polite"></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Plan de Clase Digital Interactivo</p>
-    <p>Área: Comunicación y Lenguaje</p>
-    <p>Aprender, practicar y compartir conocimientos.</p>
-  </footer>
-
-  <script>
-    function comprobar() {
-      const respuesta = document.getElementById("respuesta").value;
-      const resultado = document.getElementById("resultado");
-
-      if (respuesta === "?") {
-        resultado.textContent =
-          "¡Correcto! La oración es: ¿Cómo te llamas?";
-        resultado.style.color = "green";
-      } else if (respuesta === "") {
-        resultado.textContent = "Selecciona una respuesta.";
-        resultado.style.color = "#b45309";
-      } else {
-        resultado.textContent =
-          "Inténtalo nuevamente. Recuerda cómo se escriben las preguntas.";
-        resultado.style.color = "crimson";
-      }
-    }
-  </script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>proyecto</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
